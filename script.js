@@ -1,10 +1,13 @@
 let ws = new WebSocket("wss://socket-server-final-project.herokuapp.com/:443");
 //let ws = new WebSocket("ws://localhost:5001");
 let controlledbyTD = document.querySelector (".controlledbyTD")
-let controlTD = document.querySelector(".controlTD")
-
 let controlledbyTD2 = document.querySelector (".controlledbyTD2")
+
+let controlTD = document.querySelector(".controlTD")
 let controlTD2 = document.querySelector(".controlTD2")
+let controlTD3 = document.querySelector(".controlTD3")
+let controlTD4 = document.querySelector(".controlTD4")
+let controlTD5 = document.querySelector(".controlTD5")
 // values in td go from 0 to 1 and in web it goes from 0 to 100 
 
 controlTD.addEventListener ('input', (event) =>{
@@ -15,6 +18,21 @@ controlTD.addEventListener ('input', (event) =>{
 controlTD2.addEventListener ('input', (event) =>{
   console.log("slider2",controlTD2.value)
   ws.send( JSON.stringify({"slider2" : controlTD2.value/ 100.0}))
+})
+
+controlTD3.addEventListener ('input', (event) =>{
+  console.log("slider3",controlTD3.value)
+  ws.send( JSON.stringify({"slider3" : controlTD3.value/ 100.0}))
+})
+
+controlTD4.addEventListener ('input', (event) =>{
+  console.log("slider4",controlTD4.value)
+  ws.send( JSON.stringify({"slider4" : controlTD4.value/ 100.0}))
+})
+
+controlTD5.addEventListener ('input', (event) =>{
+  console.log("slider5",controlTD5.value)
+  ws.send( JSON.stringify({"slider5" : controlTD5.value/ 100.0}))
 })
 
 // change for only the final changed value 
