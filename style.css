@@ -1,15 +1,22 @@
 
+/* Import fonts */
+
+@font-face {
+  font-family: 'Pangram Hatton';
+  src: url('./assets/PPHatton-Medium.otf') format('opentype');
+  font-weight: 100;
+}
+
 :root {
-  --color-bg: white;
-  --color-text-main: #000000;
+  --color-bg: black;
+  --color-text-main: white;
   --color-primary: #FFFF00;
   --wrapper-height: 87vh;
   --image-max-width: 300px;
   --image-margin: 3rem;
-  --font-family: "HK Grotesk";
-  --font-family-header: "HK Grotesk";
+  --font-family: "Pangram Hatton";
+  --font-family-header: "Pangram Hatton";
 }
-
 
 /* Basic page style resets */
 * {
@@ -19,21 +26,8 @@
   display: none !important;
 }
 
-/* Import fonts */
-@font-face {
-  font-family: HK Grotesk;
-  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
-    format("opentype");
-}
-@font-face {
-  font-family: HK Grotesk;
-  font-weight: bold;
-  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
-    format("opentype");
-}
-
 body {
-  font-family: HK Grotesk;
+  font-family: 'Pangram Hatton';
   /* background-color: var(--color-bg); */
   background-color: #000000;
 }
